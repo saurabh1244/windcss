@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Professional UI Designs</title>
+
+    <style>
+        .overflow{
+            overflow: auto;
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="container mx-auto">
+
+        {% include 'navbar.html' %}
+
+        <!-- Content goes here -->
+        <div class="text-center mt-8">
+            <h1 class="text-3xl font-bold">{{ html.blog_name }}</h1>
+            <!-- Your page content goes here -->
+        </div>
+
+        {{ html.blog_code | safe }}
+
+        <!-- HTML  -->
+        <div class="mt-8 overflow" >
+            <div id="copyButton" class="bg-gray-100 text-black p-4 rounded cursor-pointer">
+                {% autoescape off %}
+                {{ html.blog_desc | safe }}
+                {% endautoescape %}
+            </div>
+        </div>
+
+        <!-- copy code end -->
+<hr>
+        <div class="mt-8">
+
+            <h2 class="text-2xl">Comments</h2>
+            <form method="post" class="max-w-md mx-auto">
+                {% csrf_token %}
+
+                <div class="mb-4">
+                    <label for="comment" class="block text-gray-700">Comments :</label>
+                    <input id="comment" name="comment" placeholder="Feedbacks"
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                </div>
+
+                <button type="submit"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+                    Submit
+                </button>
+            </form>
+
+        </div>
+
+        <div class="mt-8">
+            {% for comx in comments %}
+            <div class="bg-red-600 text-white p-4 mb-4 rounded">
+                @ {{ comx.text }}
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+  <!-- Copy JS -->
+
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new ClipboardJS('#copyButton', {
+                text: function () {
+                    return document.querySelector('#copyButton').textContent.trim();
+                }
+            });
+
+            document.getElementById('copyButton').addEventListener('click', function () {
+                alert('Code copied to clipboard!');
+            });
+        });
+    </script>
+    <!-- Copy JS end -->
+
+    
+</body>
+
+</html>

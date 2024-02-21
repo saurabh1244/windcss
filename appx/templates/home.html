@@ -1,0 +1,69 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+{% include 'navbar.html' %}
+
+<style>
+    a {
+        text-decoration: none !important;
+    }
+
+    .card {
+        border: none;
+    }
+</style>
+
+<main class="flex flex-col items-center justify-center min-h-screen py-2">
+
+
+
+
+
+<div>
+        {{ request.user }}
+{{ request.user.first_name }}
+    {{ request.user.last_name }}
+
+{% if request.user.is_authenticated  %}
+         <h2 > <a href="/logout/"> Logout </a> </h2>
+{% else %}
+<h2 > <a href="/login/"> login </a> </h2>
+{% endif %}
+
+
+<h2 > <a href="/register/"> register </a> </h2>
+</div>
+
+
+
+<div> <a href="/post_user/"> <h1> post blog  </h1> </a></div>
+
+<section id="home" class="flex flex-col items-center justify-center space-y-4 py-12">
+    
+    <h2 class="text-4xl font-bold">Welcome to UI Showcase</h2>
+    
+    <p class="text-gray-500 dark:text-gray-400">Explore our collection of beautifully designed UI components.</p>
+    
+    <a class="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300" href="{% url 'page' %}">Explore Now</a>
+
+</section>
+
+<section id="about" class="flex flex-col items-center justify-center space-y-4 py-12">
+    <h2 class="text-4xl font-bold">Meet Our Team</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="card">
+            <img src="https://imgs.search.brave.com/ekZY-6Cov4r_LKCnScWrvSh9hbzilEsTx5TcRc_fq3g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3lyYWN1c2UuY29t/L3Jlc2l6ZXIvTGpU/YktGaUhtSlNFSnli/b2k2OHZuRVloNDBV/PS8xMjgweDAvc21h/cnQvY2xvdWRmcm9u/dC11cy1lYXN0LTEu/aW1hZ2VzLmFyY3B1/Ymxpc2hpbmcuY29t/L2FkdmFuY2Vsb2Nh/bC9FQUFDTVc0M0Va/QVZORFBOQ0FWMjZK/WkFGSS5qcGc" width="100" height="100" alt="Team member 1" class="rounded-full" style="aspect-ratio: 100 / 100; object-fit: cover;">
+            <h3 class="text-lg font-bold mt-2">Pushp Raj Sharma</h3>
+            <p class="text-gray-500 dark:text-gray-400">UI/UX Designer</p>
+        </div>
+        <div class="card">
+            <img src="https://imgs.search.brave.com/ekZY-6Cov4r_LKCnScWrvSh9hbzilEsTx5TcRc_fq3g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3lyYWN1c2UuY29t/L3Jlc2l6ZXIvTGpU/YktGaUhtSlNFSnli/b2k2OHZuRVloNDBV/PS8xMjgweDAvc21h/cnQvY2xvdWRmcm9u/dC11cy1lYXN0LTEu/aW1hZ2VzLmFyY3B1/Ymxpc2hpbmcuY29t/L2FkdmFuY2Vsb2Nh/bC9FQUFDTVc0M0Va/QVZORFBOQ0FWMjZK/WkFGSS5qcGc" width="100" height="100" alt="Team member 2" class="rounded-full" style="aspect-ratio: 100 / 100; object-fit: cover;">
+            <h3 class="text-lg font-bold mt-2">Pushp Raj Sharma</h3>
+            <p class="text-gray-500 dark:text-gray-400">Frontend Developer</p>
+        </div>
+        <div class="card">
+            <img src="https://imgs.search.brave.com/ekZY-6Cov4r_LKCnScWrvSh9hbzilEsTx5TcRc_fq3g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3lyYWN1c2UuY29t/L3Jlc2l6ZXIvTGpU/YktGaUhtSlNFSnli/b2k2OHZuRVloNDBV/PS8xMjgweDAvc21h/cnQvY2xvdWRmcm9u/dC11cy1lYXN0LTEu/aW1hZ2VzLmFyY3B1/Ymxpc2hpbmcuY29t/L2FkdmFuY2Vsb2Nh/bC9FQUFDTVc0M0Va/QVZORFBOQ0FWMjZK/WkFGSS5qcGc" width="100" height="100" alt="Team member 3" class="rounded-full" style="aspect-ratio: 100 / 100; object-fit: cover;">
+            <h3 class="text-lg font-bold mt-2">Saurabh Chandra</h3>
+            <p class="text-gray-500 dark:text-gray-400">Backend Developer</p>
+            </div>
+        </div>
+    </section>
+</main>
