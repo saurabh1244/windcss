@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-icx$hr^)qz9e5!^8y43%&zzw1h#*#!x@wtudld4fub1+rlfl=h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','csswind.tech','plankton-app-2cb2m.ondigitalocean.app']
+ALLOWED_HOSTS = ['plankton-app-2cb2m.ondigitalocean.app','csswind.tech','localhost']
 
 
 # Application definition
