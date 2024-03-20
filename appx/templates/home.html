@@ -1,85 +1,4 @@
-<!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-{% include 'navbar.html' %}
 
-<style>
-    a {
-        text-decoration: none !important;
-    }
-
-    .card {
-        border: none;
-    }
-</style>
-
-<main class="flex flex-col items-center justify-center min-h-screen py-2">
-
-
-
-
-
-<div>
-        {{ request.user }}
-{{ request.user.first_name }}
-    {{ request.user.last_name }}
-
-{% if request.user.is_authenticated  %}
-         <h2 > <a href="/logout/"> Logout </a> </h2>
-{% else %}
-<h2 > <a href="/login/"> login </a> </h2>
-{% endif %}
-
-
-<h2 > <a href="/register/"> register </a> </h2>
-</div>
-
-
-
-<div> <a href="/post_user/"> <h1> post blog  </h1> </a></div>
-
-<section id="home" class="flex flex-col items-center justify-center space-y-4 py-12">
-    
-    <h2 class="text-4xl font-bold">Welcome to UI Showcase</h2>
-    
-    <p class="text-gray-500 dark:text-gray-400">Explore our collection of beautifully designed UI components.</p>
-    
-    <a class="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300" href="{% url 'page' %}">Explore Now</a>
-
-</section>
-
-            <h3 class="text-lg font-bold mt-2">Pushp Raj Sharma</h3>
-            <p class="text-gray-500 dark:text-gray-400">Frontend Developer</p>
-        </div>
-        <div class="card">
-            <img src="https://imgs.search.brave.com/ekZY-6Cov4r_LKCnScWrvSh9hbzilEsTx5TcRc_fq3g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3lyYWN1c2UuY29t/L3Jlc2l6ZXIvTGpU/YktGaUhtSlNFSnli/b2k2OHZuRVloNDBV/PS8xMjgweDAvc21h/cnQvY2xvdWRmcm9u/dC11cy1lYXN0LTEu/aW1hZ2VzLmFyY3B1/Ymxpc2hpbmcuY29t/L2FkdmFuY2Vsb2Nh/bC9FQUFDTVc0M0Va/QVZORFBOQ0FWMjZK/WkFGSS5qcGc" width="100" height="100" alt="Team member 3" class="rounded-full" style="aspect-ratio: 100 / 100; object-fit: cover;">
-            <h3 class="text-lg font-bold mt-2">Saurabh Chandra</h3>
-            <p class="text-gray-500 dark:text-gray-400">Backend Developer</p>
-            </div>
-        </div>
-    </section> 
-
-
-    <section id="features" class="py-12">
-            <div class="container mx-auto text-center">
-                <h2 class="text-4xl font-bold mb-8">Our Features</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="p-6 bg-white rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4">Beautiful Design</h3>
-                        <p class="text-gray-700">Our website features stunning designs crafted with attention to
-                            detail.</p>
-                    </div>
-                    <div class="p-6 bg-white rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4">Easy to Use</h3>
-                        <p class="text-gray-700">Intuitive user interface makes navigation a breeze for everyone.</p>
-                    </div>
-                    <div class="p-6 bg-white rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4">Fast Performance</h3>
-                        <p class="text-gray-700">Enjoy lightning-fast loading times and seamless interactions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-</main>
- -->
 
 
 <!DOCTYPE html>
@@ -94,46 +13,6 @@
 <body class="bg-gray-100">
 
 
-
-
-<!-- <div>
-        {{ request.user }}
-{{ request.user.first_name }}
-    {{ request.user.last_name }}
-
-{% if request.user.is_authenticated  %}
-         <h2 > <a href="/logout/"> Logout </a> </h2>
-{% else %}
-<h2 > <a href="/login/"> login </a> </h2>
-{% endif %}
-
-
-<h2 > <a href="/register/"> register </a> </h2>
-</div> -->
-
-
- <!-- <div class="container mx-auto">
-    <nav class="flex items-center justify-between py-4">
-        <div>
-         
-            <a href="/" class="text-2xl font-bold text-gray-800">Windcss</a>
-        </div>
-        <div class="space-x-4">
-         
-            {% if request.user.is_authenticated %}
-                <div class="flex items-center space-x-2">
-                    <span class="text-gray-600">Welcome, {{ request.user.first_name }} {{ request.user.last_name }}</span>
-                    <a href="/logout/" class="text-blue-600 hover:underline">Logout</a>
-                </div>
-            {% else %}
-                <div class="flex items-center space-x-4">
-                    <a href="/login/" class="text-gray-600 hover:text-blue-600 hover:underline">Login</a>
-                    <a href="/register/" class="text-gray-600 hover:text-blue-600 hover:underline">Register</a>
-                </div>
-            {% endif %}
-        </div>
-    </nav>
-</div>  -->
 
 
 <div class="container mx-auto">
@@ -166,20 +45,7 @@
 
 
 
-<!-- <div class="container">
-    {% for data in datas %}  
-        <div class="bg-gray-100">
-            <a href="/post/{{ data.slugx }}">{{ data.blog_name }}</a>
-            <p class="text-gray-500 mt-1">{{ data.excerpt }}</p>
-        </div>
-    {% endfor %}
-</div> -->
 
-<!-- <form method="post">
-    {% csrf_token %}
-    <input type="text" name="search" placeholder="Search using Name">
-    <button type="submit"> search</button>
-</form> -->
 
  <!-- Big search bar -->
  <form method="post" class="mb-8">
@@ -192,58 +58,6 @@
 
 
 
-<!-- <div class="container">
-    {% for data in datas %}  
-        <div class="bg-gray-100">
-            <a href="/post/{{ data.slugx }}">{{ data.blog_name }}</a>
-            <p class="text-gray-500 mt-1">{{ data.excerpt }}</p>
-        </div>
-    {% endfor %}
-</div> -->
-
-<!-- <div class="container mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {% for data in datas %}  
-       <a href="/post/{{ data.slugx }}" >
-            <div  class="bg-white rounded-lg shadow-md p-4 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                <p  class="text-xl font-semibold text-gray-800 hover:text-blue-600">{{ data.blog_name }}</p>
-                <p class="text-gray-500 mt-1">{{ data.excerpt }}</p>
-            </div>
-        </a>
-        
-        {% endfor %}
-    </div>
-</div> -->
-
-<!-- <div class="container mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {% for data in datas %}  
-            <a href="/post/{{ data.slugx }}" class="block">
-                <div class="bg-white rounded-lg shadow-md p-4 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                    <p class="text-xl font-semibold text-gray-800 hover:text-blue-600">{{ data.blog_name }}</p>
-                    <p class="text-gray-500 mt-1">{{ data.excerpt }}</p>
-                    <p class="text-blue-600 mt-2">Watch</p>
-                </div>
-            </a>
-        {% endfor %}
-    </div>
-</div> -->
-
-
-<!-- <div class="container mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {% for data in datas %}
-        <a href="/post/{{ data.slugx }}" class="block">
-            <div class="bg-white rounded-lg shadow-md p-4 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                <p class="text-xl font-semibold text-gray-800 hover:text-blue-600">{{ data.blog_name }}</p>
-                <p class="text-gray-500 mt-1">{{ data.excerpt }}</p>
-               
-                {{ data.blog_code | safe }}
-            </div>
-        </a>
-        {% endfor %}
-    </div>
-</div> -->
 
 <div class="container mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
